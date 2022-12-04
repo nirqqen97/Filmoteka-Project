@@ -1,0 +1,107 @@
+.header { 
+  width: 100%;
+  margin-left: auto; 
+  margin-right: auto;
+  padding:44px 0px;
+  
+  background-image: url(../images/mobile/main-bg-mobile.jpg);
+  background-size: cover;
+   
+  color:white;
+  font-family: Roboto, sans-serif;
+  font-weight: 500; 
+    
+  @media screen and (min-width: 768px){
+    background-image: url(../images/tablet/main-bg-tablet.jpg);
+  }
+} 
+
+.site-nav{
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 60px;
+  text-align: center;
+  align-self: center;
+}
+  
+.site-nav__menu{
+  display: flex; 
+  text-align: center;
+  align-self: center;  
+}
+  
+.site-nav__menu-item{
+  margin-left: 40px;
+}
+  
+.site-nav__menu--line {
+  position: relative;
+}
+      
+.site-nav__menu--line::after {  
+  display:inline-block;
+  
+  position: absolute;
+  top: 18px;
+  right: 0px;
+  content: '';
+      
+  width: 100%;
+  height: 3px;
+  background-color:#FF001B;;
+}
+  
+.site-nav__logo {  
+  font-size: 30px;
+  line-height: 1.17;    
+}
+  
+.site-nav__logo-name{
+  display:none;
+  @media screen and (min-width: 768px){
+    display: inline;
+  }
+}
+  
+.search__form{
+  position: relative;
+  color: white;
+}
+  
+.input {   
+  width: 100%; 
+  margin-bottom: 20px;
+  
+  background:transparent;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  border-color: white;
+  border-width: 1px; 
+  color: white; 
+
+  @media screen and (min-width: 768px){
+    width: 336px;
+  } 
+
+  @media screen and (min-width: 1280px){
+    width: 394px;
+  }
+}
+  
+::placeholder {  
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.17;  
+}
+  
+.message {  
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.17;
+  color: #FF001B;
+}
+
