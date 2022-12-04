@@ -5,3 +5,4 @@ import './JavaScript/loader';
 import './JavaScript/localStorageUtil';
 import './JavaScript/modalMarkup';
 import './JavaScript/openModalMovie';
+import './JavaScript/back-to-top';
