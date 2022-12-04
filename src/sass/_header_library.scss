@@ -1,0 +1,20 @@
+.header__library {
+    width: 100%;
+    background-image: url(../images/mobile/library-bg-mobile.jpg);
+    background-size: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 76px;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+
+    @media screen and (min-width: 768px) {
+        background-image: url(../images/tablet/library-bg-tablet.jpg);
+    }
+}
+
+.container__library {
+    text-align: center;
+}

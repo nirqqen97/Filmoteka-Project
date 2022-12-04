@@ -1,6 +1,6 @@
 export const refs = {
   body: document.querySelector('body'),
-  input: document.getElementById('input'),
+  input: document.querySelector('input'),
   searchForm: document.getElementById('search-form'),
   filmCards: document.querySelector('.js-film-cards'),
 
