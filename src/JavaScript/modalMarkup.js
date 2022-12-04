@@ -10,7 +10,7 @@ export function createMarkupModal({
   id,
 }) {
   return `<div class="modal">
-        <button data-action="close-modal" class="btn__close">
+        <button class="btn__close js-close-modal">
           <svg class="btn__close-icon" width="30" height="30">
             <use href="./images/sprite.svg#close2"></use>
           </svg>
