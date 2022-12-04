@@ -19,8 +19,15 @@
   },
   "dependencies": {
     "axios": "^1.2.0",
+    "basiclightbox": "^5.0.4",
+    "handlebars": "^4.7.7",
+    "lod": "^0.1.0",
+    "lodash": "^4.17.21",
     "modern-normalize": "^1.1.0",
-    "notiflix": "^3.2.5"
+    "movie-trailer": "^1.0.4",
+    "notiflix": "^3.2.5",
+    "sass": "^1.56.1",
+    "tui-pagination": "^3.4.1"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
