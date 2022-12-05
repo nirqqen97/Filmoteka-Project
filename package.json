@@ -18,12 +18,12 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.6.0",
     "axios": "^1.2.0",
     "basiclightbox": "^5.0.4",
     "handlebars": "^4.7.7",
     "lod": "^0.1.0",
     "lodash": "^4.17.21",
-    "@glidejs/glide": "^3.6.0",
     "modern-normalize": "^1.1.0",
     "movie-trailer": "^1.0.4",
     "notiflix": "^3.2.5",
