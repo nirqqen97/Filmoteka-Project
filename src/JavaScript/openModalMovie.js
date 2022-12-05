@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import { NewApiService } from './apiClass';
+// import { NewApiService } from './apiClass';
 const filmoteka = document.querySelector('.filmoteka');
 
 // const newApiService = new NewApiService();
