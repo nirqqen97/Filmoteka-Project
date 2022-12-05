@@ -1,0 +1,12 @@
+@mixin flex($df, $ai, $jc, $fd, $fw) {
+  display: $df;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+@mixin centralFlex($type: center) {
+  display: flex;
+  justify-content: $type;
+  align-items: center;
+}

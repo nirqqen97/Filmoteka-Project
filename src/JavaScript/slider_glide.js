@@ -1,5 +1,3 @@
-import Glide from '@glidejs/glide';
-
 export const config = {
   type: 'carousel',
   perView: 10,
@@ -37,6 +35,3 @@ export const options = {
   // autoplay: 2000,
   keyboard: true,
 };
-
-export const glide = new Glide('.glide', config);
-export const glideFooter = new Glide('.glide_footer', options);

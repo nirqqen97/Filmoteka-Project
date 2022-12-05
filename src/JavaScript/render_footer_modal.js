@@ -1,6 +1,6 @@
-import { users, usersUA } from './users';
+import { users } from './users';
 import Glide from '@glidejs/glide';
-import { glideFooter, options } from './slider_glide';
+import { options } from './slider_glide';
 import studentTpl from '../templates/student.hbs';
 import { onClickEscape, closeModal } from './modal_footer';
 
@@ -10,8 +10,6 @@ const refs = {
   modal: document.querySelector('[data-modal-footer]'),
   backdrop: document.querySelector('.js-backdrop'),
   addBodyClass: document.querySelector('body'),
-  btnEng: document.querySelector('.btn-en'),
-  btnUkr: document.querySelector('.btn-ua'),
 };
 
 export function openModal() {
@@ -43,13 +41,9 @@ export function openModal() {
   const slide = document.querySelector('.glide__slides--footer');
   const closeModalBtn = document.querySelector('[data-footer-close]');
 
-  if (refs.btnEng.classList.contains('active-select')) {
-    slide.insertAdjacentHTML('beforeend', studentTpl(users));
-  } else if (refs.btnUkr.classList.contains('active-select')) {
-    slide.insertAdjacentHTML('beforeend', studentTpl(usersUA));
-  }
+  slide.insertAdjacentHTML('beforeend', studentTpl(users));
 
-  glideFooter.destroy();
+  // glideFooter.destroy();
   let glidFooter = new Glide('.glide_footer', options);
   glidFooter.mount();
 
