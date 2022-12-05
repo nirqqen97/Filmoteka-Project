@@ -1,4 +1,4 @@
-import { addBackToTop } from 'vanilla-back-to-top';
+// import { addBackToTop } from 'vanilla-back-to-top';
 
 addBackToTop({
   diameter: 40,
