@@ -1,4 +1,4 @@
-import * as basicLightbox from 'basiclightbox';
+// import * as basicLightbox from 'basiclightbox';
 
 const markup = `<div class="loader-chase">
     <div class="loader-chase-dot"></div>
