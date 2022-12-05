@@ -3,8 +3,10 @@ export const refs = {
   input: document.querySelector('input'),
   searchForm: document.getElementById('search-form'),
   filmCards: document.querySelector('.js-film-cards'),
-
+  btnSubmit: document.querySelector('.search__form'),
+  hideText: document.querySelector('.js-hidden-message'),
   searchBtn: document.querySelector('.js-search-btn'),
+  filmoteka : document.querySelector('.filmoteka'),
 
   header: document.getElementById('header'),
   homeLink: document.querySelector('.js-link-home'),
