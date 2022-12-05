@@ -6,8 +6,6 @@ const refs = {
   modal: document.querySelector('[data-modal-footer]'),
   backdrop: document.querySelector('.js-backdrop'),
   addBodyClass: document.querySelector('body'),
-  btnEng: document.querySelector('.btn-en'),
-  btnUkr: document.querySelector('.btn-ua'),
 };
 
 refs.openModalLink.addEventListener('click', openModal);
