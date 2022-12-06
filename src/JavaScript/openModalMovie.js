@@ -25,6 +25,8 @@ async function getMovieById(id) {
     );
     const data = createMarkupModal(response.data)   
     refs.backdrop.innerHTML = data;
+  onClick();
+
   } catch (error) {
     console.error(error);
   }
@@ -42,7 +44,6 @@ async function handleOpenModal(event) {
   // {
   //   return;
   // }
-  onClick();
 
   refs.backdrop.classList.remove('is-hidden');
   const movieId = event.target.parentNode.parentNode.dataset.id; //из разметки получить id-фильма
