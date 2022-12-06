@@ -25,16 +25,12 @@ export function createMarkupModal({
               <li class="modal__item">
                 <p class="modal__item-vote">Vote / Votes</p>
                 <p class="modal__item-votes">
-                  <span class="modal__item-votes-span">${vote_average.toFixed(
-                    1
-                  )}</span>/ ${vote_count}
+                  <span class="modal__item-votes-span">${vote_average.toFixed(1)}</span>/ ${vote_count}
                 </p>
               </li>
               <li class="modal__item">
                 <p class="modal__item-popularity">Popularity</p>
-                <p class="modal__item-popularity-value">${popularity.toFixed(
-                  1
-                )}</p>
+                <p class="modal__item-popularity-value">${popularity.toFixed(1)}</p>
               </li>
               <li class="modal__item">
                 <p class="modal__item-original-title">Original Title</p>
