@@ -17,9 +17,8 @@ async function getMovieById(id) {
     const response = await axios.get(
       `https://api.themoviedb.org/3/movie/${id}?api_key=8a95c8805d5f43b82cb5bfd70a3069b5&language=en-US`
     );
-    console.log(response.data); 
-  const createModalCard = createMarkupModal(response.data);
-  refs.backdrop.innerHTML = createModalCard;
+    const data = createMarkupModal(response.data)   
+    refs.backdrop.innerHTML = data;
    
   } catch (error) {
     console.error(error);
