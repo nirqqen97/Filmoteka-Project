@@ -4,6 +4,12 @@ import {createMarkupModal} from './modalMarkup';
 import NewApiService from './apiClass';
 const filmoteka = document.querySelector('.filmoteka');
 
+
+import onClick from './onClick';
+
+
+
+
 const newApiService = new NewApiService();
 
 // async function getMovieById(id) {
@@ -19,7 +25,7 @@ async function getMovieById(id) {
     );
     const data = createMarkupModal(response.data)   
     refs.backdrop.innerHTML = data;
-   
+    onClick();
   } catch (error) {
     console.error(error);
   }
