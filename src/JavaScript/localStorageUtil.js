@@ -3,7 +3,16 @@ class LocalStorageFilm {
         this.keyName = 'queueFilms';
     }
   
+<<<<<<< Updated upstream
     getProducts() {
+=======
+    changeKey(newKey){
+        this.keyName = newKey;
+    }
+
+    getFilms() {
+        // const newKey = this.changeKey
+>>>>>>> Stashed changes
         const filmsLocalStorage = localStorage.getItem(this.keyName);
         if (filmsLocalStorage !== null) {
             return JSON.parse(filmsLocalStorage);
