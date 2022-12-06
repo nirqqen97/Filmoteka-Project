@@ -1,6 +1,6 @@
 import { refs } from './refs';
 import axios from 'axios';
-import createMarkupModal from './modalMarkup';
+import {createMarkupModal} from './modalMarkup';
 import NewApiService from './apiClass';
 const filmoteka = document.querySelector('.filmoteka');
 
@@ -17,7 +17,10 @@ async function getMovieById(id) {
     const response = await axios.get(
       `https://api.themoviedb.org/3/movie/${id}?api_key=8a95c8805d5f43b82cb5bfd70a3069b5&language=en-US`
     );
-    console.log(response);
+    console.log(response.data); 
+  const createModalCard = createMarkupModal(response.data);
+  refs.backdrop.innerHTML = createModalCard;
+   
   } catch (error) {
     console.error(error);
   }
@@ -39,9 +42,9 @@ async function handleOpenModal(event) {
   const movieId = event.target.parentNode.parentNode.dataset.id; //из разметки получить id-фильма
   console.log(movieId);
   const { data } = getMovieById(movieId); ////получить данные по id-фильма
-  console.log({ data });
-  const createModalCard = createMarkupModal(data);
-  refs.backdrop.innerHTML = createModalCard;
+
+  // const createModalCard = createMarkupModal(data);
+  // refs.backdrop.innerHTML = createModalCard;
 }
 
 function closeModal(event) {
