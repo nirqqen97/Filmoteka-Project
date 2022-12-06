@@ -80,7 +80,7 @@ export const users = [
     id: '8',
     name: 'Rostyslav Natkha',
     role: 'Developer',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/330px-Brad_Pitt_2019_by_Glenn_Francis.jpg',
+    img: '../images/avatar/user.jpg',
     ginHabLink: 'https://github.com',
     FB_Link: 'https://www.facebook.com',
     LN_Link: 'https://www.linkedin.com',
