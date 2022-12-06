@@ -10,7 +10,7 @@ queueBtn.addEventListener('click', onBtnQueueClick)
 
 function onBtnQueueClick(){
     const localStorageUtil = new LocalStorageUtil()
-    
+    filmoteka.innerHTML = '';
     const filmData = localStorageUtil.getFilms();
  console.log("🚀 ~ filmData", filmData)
  const filmList = filmData.map((item)=>{
@@ -24,6 +24,5 @@ function onBtnQueueClick(){
     </div>          
   </div> `
  }).join('')
- 
  filmoteka.insertAdjacentHTML('beforeend', filmList)
 }
