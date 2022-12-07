@@ -1,3 +1,5 @@
+
+
 .loader-chase {
     width: 100px;
     height: 100px;
@@ -100,6 +102,8 @@
 .filmoteka {
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
     margin: 20px 0px;
 
     justify-content: center;
@@ -109,15 +113,14 @@
     }
 
     @media screen and (min-width: 1280px) {
-        margin-right: -16px;
+        margin-right: -32px;
     }
 }
 
 .photo-card {
     margin-bottom: 20px;
     width: 280px;
-    height: 443px;
-    border-radius: 5px;
+    height: 443px;   
 
     @media screen and (min-width: 768px) {
         margin-bottom: 32px;
@@ -136,20 +139,29 @@
             margin-left: 32px;
         }
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 1280px) {
             margin-left: 0;
         }
     }
 }
 
-.photo-card__link {
-    border-radius: 5px;
+.img {   
+    width: 100%;
+    height: 402px;
+    @media screen and (min-width: 768px) {
+        height: 455px;  
+    }
+    @media screen and (min-width: 1280px) {
+        height: 574px;  
+    }
 }
+
 
 .info {
     font-family: Roboto, sans-serif;
     font-style: medium;
     text-transform: uppercase;
+    text-align: left;
     font-weight: 500;
     line-height: 1.17;
     font-size: 12px;
@@ -157,9 +169,12 @@
     color: #000000;
     margin-top: 10px;
 
-    @media screen and (min-width: 768px) {
-        text-align: left;
-        margin-top: 8px;
+    @media screen and (min-width: 768px) {   
+       margin-top: 8px;
+    }
+    @media screen and (min-width: 1280px) {
+        font-size: 20px; 
+        margin-top: 12px;      
     }
 }
 
