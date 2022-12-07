@@ -13,3 +13,4 @@ import './JavaScript/users';
 import '../node_modules/@fortawesome/fontawesome-free/js/solid.min';
 import '../node_modules/@fortawesome/fontawesome-free/js/brands.min';
 import '../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min';
+import './JavaScript/pagination';
