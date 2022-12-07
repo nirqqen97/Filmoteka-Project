@@ -10,11 +10,13 @@ export function createMarkupModal({
   id,
   release_date,
 }) {
+  const genresList = genres.map(item => item.name).join(', ');
   return `<div class="modal">
-        <button class="btn__close js-close-modal">
-          <svg class="btn__close-icon" width="30" height="30">
-            <use href="./images/sprite.svg#close2"></use>
-          </svg>
+        <button type="button" class="btn__close js-close-modal">
+         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="js-close-modal btn__close-icon">
+          <path d="M8 8L22 22" stroke="black" stroke-width="2"/>
+          <path d="M8 22L22 8" stroke="black" stroke-width="2"/>
+      </svg>                
         </button>
         <div class="modal_container" data-id="${id}">
           <div class="modal__img-thumb">
@@ -26,12 +28,16 @@ export function createMarkupModal({
               <li class="modal__item">
                 <p class="modal__item-vote">Vote / Votes</p>
                 <p class="modal__item-votes">
-                  <span class="modal__item-votes-span">${vote_average.toFixed(1)}</span>/ ${vote_count}
+                  <span class="modal__item-votes-span">${vote_average.toFixed(
+                    1
+                  )}</span>/ ${vote_count}
                 </p>
               </li>
               <li class="modal__item">
                 <p class="modal__item-popularity">Popularity</p>
-                <p class="modal__item-popularity-value">${popularity.toFixed(1)}</p>
+                <p class="modal__item-popularity-value">${popularity.toFixed(
+                  1
+                )}</p>
               </li>
               <li class="modal__item">
                 <p class="modal__item-original-title">Original Title</p>
@@ -41,7 +47,7 @@ export function createMarkupModal({
               </li>
               <li class="modal__item">
                 <p class="modal__item-genre">Genre</p>
-                <p class="modal__item-genre-value">${genres}</p>
+                <p class="modal__item-genre-value">${genresList}</p>
               </li>
             </ul>
             <h3 class="modal__about-title">About</h3>
