@@ -1,9 +1,9 @@
 import { refs } from './refs';
 import axios from 'axios';
-import {createMarkupModal} from './modalMarkup';
+import { createMarkupModal } from './modalMarkup';
 import NewApiService from './apiClass';
 const filmoteka = document.querySelector('.filmoteka');
-
+import onClick from './onClick';
 const newApiService = new NewApiService();
 
 // async function getMovieById(id) {
@@ -12,21 +12,22 @@ const newApiService = new NewApiService();
 //   );
 // }
 
+
 async function getMovieById(id) {
   try {
     const response = await axios.get(
       `https://api.themoviedb.org/3/movie/${id}?api_key=8a95c8805d5f43b82cb5bfd70a3069b5&language=en-US`
     );
-    const data = createMarkupModal(response.data)   
+    const data = createMarkupModal(response.data);
     refs.backdrop.innerHTML = data;
-   
+  onClick();
   } catch (error) {
     console.error(error);
   }
 }
 
 refs.backdrop.addEventListener('click', closeModal);
-filmoteka.addEventListener('click', handleOpenModal);
+refs.filmoteka.addEventListener('click', handleOpenModal);
 
 async function handleOpenModal(event) {
   event.preventDefault();
@@ -37,11 +38,12 @@ async function handleOpenModal(event) {
   // {
   //   return;
   // }
-  refs.backdrop.classList.remove('is-hidden');
-  const movieId = event.target.parentNode.parentNode.dataset.id; //из разметки получить id-фильма
-  console.log(movieId);
-  const { data } = getMovieById(movieId); ////получить данные по id-фильма
 
+
+  refs.backdrop.classList.remove('is-hidden');
+  const movieId = event.target.parentNode.parentNode.dataset.id;
+  console.log(movieId);
+  const { data } = getMovieById(movieId);
   // const createModalCard = createMarkupModal(data);
   // refs.backdrop.innerHTML = createModalCard;
 }

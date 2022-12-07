@@ -1,0 +1,20 @@
+<svg width="0" height="0" class="hidden">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 13" id="heart">
+    <path d="M7 12.88L6.02 11.9C2.38 8.68 0 6.51 0 3.85C0 1.68 1.68 0 3.85 0C5.04 0 6.23 0.56 7 1.47C7.77 0.56 8.96 0 10.15 0C12.32 0 14 1.68 14 3.85C14 6.51 11.62 8.68 7.98 11.9L7 12.88Z" fill="#FF6B08"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="arrow-left">
+    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M12.667 8H3.333M8 12.667 3.333 8 8 3.333"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="arrow-right">
+    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333" d="M3.333 8h9.334M8 12.667 12.667 8 8 3.333"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30" id="close">
+    <path stroke="#000" stroke-width="2" d="m8 8 14 14M8 22 22 8"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="logo">
+    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.82 2.704H4.18C2.976 2.704 2 3.634 2 4.78v14.892c0 1.146.976 2.076 2.18 2.076h15.64c1.204 0 2.18-.93 2.18-2.076V4.78c0-1.146-.976-2.076-2.18-2.076ZM7 2.704v19.044M17 2.704v19.044M2 12.226h20M2 7.465h5M2 16.987h5M17 16.987h5M17 7.465h5"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" id="search">
+    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M5.5 9.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM10.5 10.5 8.325 8.325"></path>
+  </symbol>
+</svg>

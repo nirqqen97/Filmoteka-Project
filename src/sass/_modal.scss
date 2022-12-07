@@ -22,19 +22,19 @@
 }
 
 .modal {
-  width: 80vw;
   max-width: 390px;
   background-color: #fff;
   padding: 48px 20px;
   position: relative;
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   overflow-y: scroll;
   opacity: 1;
 }
 @media screen and (max-width: 767px) {
   .modal {
+    width: 80vw;
     height: 80%;
   }
 }
@@ -42,10 +42,8 @@
 @media screen and (min-width: 768px) {
   .modal {
     max-width: 704px;
-    /* height: 552px; */
     padding: 40px;
     overflow-y: unset;
-    /* transform: translate(-50%, -50%); */
   }
 }
 @media screen and (min-width: 1280px) {
@@ -64,15 +62,19 @@
   border: none;
   background-color: transparent;
 }
-.btn__close:hover {
+.btn__close:hover,
+.btn__close:focus {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .btn__close-icon {
   transition: linear 250ms;
+  fill: #000;
 }
 .btn__close-icon:hover {
   fill: #ff6b01;
+  color: #ff6b01;
 }
 
 .modal__img-thumb {
@@ -121,6 +123,9 @@
     margin-top: 0;
   }
 }
+.modal__list {
+  padding: 0;
+}
 .modal__item {
   display: flex;
   margin-bottom: 8px;
@@ -136,7 +141,12 @@
   line-height: 1.33;
   color: #8c8c8c;
 
-  margin-right: 85px;
+  margin-right: 41px;
+}
+@media screen and (min-width: 1280px) {
+  .modal__item-vote {
+    margin-right: 85px;
+  }
 }
 .modal__item-votes {
   font-family: 'Roboto';
@@ -161,7 +171,12 @@
   line-height: 1.33;
 
   color: #8c8c8c;
-  margin-right: 97px;
+  margin-right: 53px;
+}
+@media screen and (min-width: 1280px) {
+  .modal__item-popularity {
+    margin-right: 97px;
+  }
 }
 .modal__item-popularity-value {
   font-family: 'Roboto';
@@ -180,7 +195,12 @@
   line-height: 1.33;
 
   color: #8c8c8c;
-  margin-right: 83px;
+  margin-right: 39px;
+}
+@media screen and (min-width: 1280px) {
+  .modal__item-original-title {
+    margin-right: 83px;
+  }
 }
 .modal__item-original-title-value {
   font-family: 'Roboto';
@@ -199,7 +219,12 @@
   font-size: 12px;
   line-height: 1.33;
   color: #8c8c8c;
-  margin-right: 120px;
+  margin-right: 76px;
+}
+@media screen and (min-width: 1280px) {
+  .modal__item-genre {
+    margin-right: 120px;
+  }
 }
 .modal__item-genre-value {
   font-family: 'Roboto';
@@ -244,18 +269,6 @@
     height: 160px;
   }
 }
-button {
-  border: 1px solid #000000;
-  border-radius: 5px;
-  transition: linear 250ms;
-}
-button:hover,
-button:focus {
-  background-color: #ff6b01;
-  border: 1px solid #ff6b01;
-  color: #fff;
-  cursor: pointer;
-}
 .modal__add-to-watched {
   padding: 14px 5px;
 }
@@ -282,6 +295,9 @@ button:focus {
 }
 .modal__btn-add {
   min-width: 110px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  transition: linear 250ms;
 }
 @media screen and (min-width: 768px) {
   .modal__btn-add {
@@ -292,4 +308,12 @@ button:focus {
   .modal__btn-add {
     width: 136px;
   }
+}
+
+.modal__btn-add:hover,
+.modal__btn-add:focus {
+  background-color: #ff6b01;
+  border: 1px solid #ff6b01;
+  color: #fff;
+  cursor: pointer;
 }

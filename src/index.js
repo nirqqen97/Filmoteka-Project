@@ -10,3 +10,4 @@ import './JavaScript/render_footer_modal';
 import './JavaScript/modal_footer';
 import './JavaScript/slider_glide';
 import './JavaScript/users';
+

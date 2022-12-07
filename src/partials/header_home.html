@@ -2,35 +2,19 @@
   <div class="container">
     <nav class="site-nav">
       <div class="site-nav__logo">
-        <button
-          onclick="document.location='index.html'"
-          type="text"
-          class="button"
-        >
+        <a class="site-nav__logo-link" href="./index.html">
           <svg width="24" height="24" aria-label="Go to the main page">
             <use href="/src/images/icons/symbol-defs.svg#icon-film"></use>
           </svg>
-        </button>
-        <span class="site-nav__logo-name">Filmoteka</span>
+          <span class="site-nav__logo-name">Filmoteka</span>
+        </a>
       </div>
       <ul class="site-nav__menu">
         <li class="site-nav__menu--line">
-          <button
-            onclick="document.location='index.html'"
-            type="text"
-            class="button"
-          >
-            HOME
-          </button>
+          <a href="./index.html"> HOME </a>
         </li>
         <li class="site-nav__menu-item">
-          <button
-            onclick="document.location='library.html'"
-            type="text"
-            class="button"
-          >
-            MY LIBRARY
-          </button>
+          <a href="./library.html"> MY LIBRARY </a>
         </li>
       </ul>
     </nav>
