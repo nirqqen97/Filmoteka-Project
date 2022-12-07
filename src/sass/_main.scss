@@ -118,6 +118,17 @@
     width: 280px;
     height: 443px;
     border-radius: 5px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        0px 1px 1px rgba(0, 0, 0, 0.12);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      transform: translateY(-20px);
+    }
+  
 
     @media screen and (min-width: 768px) {
         margin-bottom: 32px;

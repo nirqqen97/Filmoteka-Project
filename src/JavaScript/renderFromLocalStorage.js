@@ -34,7 +34,10 @@ function renderCards() {
       </a>  
       <div class="info">
         <p class="">${item.title}</p>
-        <p class="info-item">${item.release_date}</p>           
+        
+        <p class="info-item">${item.genre}</p>           
+        <p class="info-item">${item.release_date}</p> 
+
       </div>          
     </div> `
   }).join('')
