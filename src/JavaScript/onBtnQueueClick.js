@@ -1,4 +1,6 @@
 import LocalStorageUtil from './localStorageUtil'
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 
 export default function onBtnQueueClick(){
  const filmData = {
@@ -9,6 +11,7 @@ export default function onBtnQueueClick(){
     release_date: document.querySelector('.modal__list').id.slice(0, 4),
     votes: document.querySelector('.modal__item-votes-span').textContent,
  }
+   Notify.success(`Added to queue✅`)
  const localStorageUtil = new LocalStorageUtil()
  localStorageUtil.putFilms(filmData, filmData.filmId);
 
