@@ -11,7 +11,7 @@
   transition-property: opacity, visibility;
   transition-duration: 250ms;
   transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     justify-content: center;
     align-items: flex-start;

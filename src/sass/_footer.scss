@@ -1,7 +1,24 @@
+.footer{
+  background-color: #F7F7F7;
+  padding: 30px 0px;
+  color: #545454;
+  font-family: Roboto, sans-serif;
+  line-height: 1.18;
+  font-size: 16px; 
+  text-align: center;  
+}
+
 .footer__item {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.footer__icon{
+  margin: 0px 10px;
 }
 .students {
   display: flex;
@@ -9,6 +26,10 @@
   align-items: center;
 
   &--link {
+    color: #545454;
+    font-family: Roboto, sans-serif;
+    line-height: 1.18;
+    font-size: 16px;
     margin-left: 3px;
     text-decoration: underline;
     cursor: pointer;
