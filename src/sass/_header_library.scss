@@ -1,20 +1,47 @@
 .header__library {
-    width: 100%;
-    background-image: url(../images/mobile/library-bg-mobile.jpg);
-    background-size: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 40px;
-    padding-bottom: 76px;
-    color: white;
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
+  width: 100%;
+  background-image: url(../images/mobile/library-bg-mobile.jpg);
+  background-size: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 76px;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
 
-    @media screen and (min-width: 768px) {
-        background-image: url(../images/tablet/library-bg-tablet.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../images/mobile/library-bg-mobile.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/library-bg-mobile@2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    min-height: 216px;
+    background-image: url(../images/tablet/library-bg-tablet.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/tablet/library-bg-tablet@2x.jpg);
     }
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/desktop/library-bg-desktop.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/desktop/library-bg-desktop@2x.jpg);
+    }
+  }
 }
 
 .container__library {
-    text-align: center;
+  text-align: center;
 }

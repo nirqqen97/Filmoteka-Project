@@ -1,9 +1,13 @@
-class LocalStorageFilm {
+export default class LocalStorageFilm {
     constructor() {
         this.keyName = 'queueFilms';
     }
   
-    getProducts() {
+    changeKey(newKey){
+        this.keyName = newKey;
+    }
+
+    getFilms() {
         const filmsLocalStorage = localStorage.getItem(this.keyName);
         if (filmsLocalStorage !== null) {
             return JSON.parse(filmsLocalStorage);
@@ -11,13 +15,19 @@ class LocalStorageFilm {
         return [];
     }
   
-    putProducts(id) {
+    putFilms(film, id) {
+       
+        
         let films = this.getFilms();
+        
         let pushFilm = false;
-        const index = films.indexOf(id);
+        const index = films.findIndex(film=>
+           film.filmId === id
+           
+        );
   
         if (index === -1) {
-            films.push(id);
+            films.push(film);
             pushFilm = true;
         } else {
             films.splice(index, 1);
