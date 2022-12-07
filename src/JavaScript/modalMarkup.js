@@ -8,6 +8,7 @@ export function createMarkupModal({
   overview,
   poster_path,
   id,
+  release_date,
 }) {
   return `<div class="modal">
         <button class="btn__close js-close-modal">
@@ -21,7 +22,7 @@ export function createMarkupModal({
           </div>
           <div class="modal__about-movie">
             <h2 class="modal__title">${title}</h2>
-            <ul class="modal__list">
+            <ul class="modal__list"  id=${release_date}>
               <li class="modal__item">
                 <p class="modal__item-vote">Vote / Votes</p>
                 <p class="modal__item-votes">
