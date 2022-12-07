@@ -59,7 +59,7 @@ export function createMarkupModal({
                 ADD TO WATCHED
               </button>
               <button class="modal__add-to-queueu modal__btn-add">
-                ADD TO QUEUEU
+                ADD TO QUEUE
               </button>
             </div>
           </div>
