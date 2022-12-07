@@ -12,11 +12,15 @@ watchedBtn.addEventListener('click', onWatchedBtnClick)
 
 function onQueueBtnClick() {
   localStorageUtil.changeKey('queueFilms')
+  watchedBtn.classList.remove('button__library--current')
+  queueBtn.classList.add('button__library--current')
   renderCards()
 }
 
 function onWatchedBtnClick() {
   localStorageUtil.changeKey('WatchedFilms')
+  queueBtn.classList.remove('button__library--current')
+  watchedBtn.classList.add('button__library--current')
   renderCards()
 }
 
