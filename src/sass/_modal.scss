@@ -34,17 +34,20 @@
 }
 @media screen and (max-width: 768px) {
   .modal {
-//  border-radius: 8px;
-//  @media screen and (max-width: 767px) {
+    border-radius: 8px;
     width: 80vw;
     height: 80%;
   }
+}
   @media screen and (min-width: 768px) {
+    .modal {
     max-width: 704px;
     padding: 40px;
     overflow-y: unset;
   }
+}
   @media screen and (min-width: 1280px) {
+    .modal {
     max-width: 806px;
     padding: 40px 12px;
   }
