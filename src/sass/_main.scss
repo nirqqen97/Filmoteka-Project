@@ -99,9 +99,6 @@
 }
 
 .filmoteka {
-  margin: 20px 0px;
-
-  @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
