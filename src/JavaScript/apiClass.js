@@ -1,6 +1,6 @@
 const BASE_URL = `https://api.themoviedb.org/3`;
 const KEY = `2a8b839138ac7f0e01e4e118027c67da`;
-import initPagination from '../JavaScript/pagination';
+import { initPagination } from '../JavaScript/pagination';
 
 export class NewApiService {
   constructor() {

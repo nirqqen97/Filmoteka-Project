@@ -10,7 +10,7 @@ export async function fetchPopularFilms(resetPager = false) {
     const films = await apiService.fetchTrends();
     generateFilmoteka(films);
   } catch (error) {
-    refs.hideText.classList.remove('clear');
+    refs.hideText?.classList.remove('clear');
   }
 }
 
@@ -23,12 +23,12 @@ export async function fetchByName(name, resetPager = false) {
     const films = await apiService.fetchByKeyWord();
 
     if (!films?.length) {
-      refs.hideText.classList.remove('clear');
+      refs.hideText?.classList.remove('clear');
     } else {
       generateFilmoteka(films);
     }
   } catch (error) {
-    refs.hideText.classList.remove('clear');
+    refs.hideText?.classList.remove('clear');
   }
 }
 
