@@ -10,6 +10,7 @@ export class NewApiService {
     this.language = 'en-US';
     this.results = null;
     this.searchType = '';
+    this.genres = [];
   }
 
   async fetchTrends() {
@@ -22,7 +23,7 @@ export class NewApiService {
     this.results = data.total_results;
     this.searchType = 'byDefault';
     initPagination();
-    return data.results;
+    return this.prepareResult(data);
   }
 
   async fetchByKeyWord() {
@@ -40,8 +41,7 @@ export class NewApiService {
 
     this.searchType = 'byName';
     initPagination();
-
-    return data.results;
+    return this.prepareResult(data);
   }
 
   async fetchFullInfo() {
@@ -68,6 +68,20 @@ export class NewApiService {
     const data = await response.json();
 
     return data.genres;
+  }
+
+  async prepareResult(data) {
+    if (!this.genres?.length) {
+      this.genres = (await this.fetchGenresList()) || [];
+    }
+    return data?.results?.map(film => {
+      return {
+        ...film,
+        genres: film.genre_ids
+          .map(genreId => this.genres.find(g => g.id === genreId)?.name)
+          .join(', '),
+      };
+    });
   }
 
   resetPage() {
