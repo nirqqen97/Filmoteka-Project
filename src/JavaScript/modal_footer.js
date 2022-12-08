@@ -8,8 +8,8 @@ const refs = {
   addBodyClass: document.querySelector('body'),
 };
 
-refs.openModalLink.addEventListener('click', openModal);
-refs.backdrop.addEventListener('click', onBackdropClick);
+if (refs.openModalLink) refs.openModalLink.addEventListener('click', openModal);
+if (refs.backdrop) refs.backdrop.addEventListener('click', onBackdropClick);
 
 export function onClickEscape(event) {
   if (event.key === 'Escape') {

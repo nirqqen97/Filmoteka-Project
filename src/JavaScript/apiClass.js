@@ -1,7 +1,8 @@
 const BASE_URL = `https://api.themoviedb.org/3`;
 const KEY = `2a8b839138ac7f0e01e4e118027c67da`;
+import initPagination from '../JavaScript/pagination';
 
-export default class NewApiService {
+export class NewApiService {
   constructor() {
     this.page = 1;
     this.searchQuery = '';
@@ -12,29 +13,22 @@ export default class NewApiService {
   }
 
   async fetchTrends() {
-    const searchParams = new URLSearchParams({
-      api_key: KEY,
-      language: this.language,
-      page: this.page,
-    });
+    const searchParams = new URLSearchParams(this.getRequestParams());
 
     const url = `${BASE_URL}/trending/movie/day?${searchParams}`;
     const response = await fetch(url);
     const data = await response.json();
 
     this.results = data.total_results;
-    this.pages = data.total_pages;
     this.searchType = 'byDefault';
-
+    initPagination();
     return data.results;
   }
 
   async fetchByKeyWord() {
     const searchParams = new URLSearchParams({
-      api_key: KEY,
-      language: this.language,
+      ...this.getRequestParams(),
       query: this.searchQuery,
-      page: this.page,
       include_adult: false,
     });
 
@@ -43,9 +37,9 @@ export default class NewApiService {
     const data = await response.json();
 
     this.results = data.total_results;
-    this.pages = data.total_pages;
 
     this.searchType = 'byName';
+    initPagination();
 
     return data.results;
   }
@@ -76,10 +70,6 @@ export default class NewApiService {
     return data.genres;
   }
 
-  incrementPage() {
-    this.page += 1;
-  }
-
   resetPage() {
     this.page = 1;
   }
@@ -99,4 +89,14 @@ export default class NewApiService {
   set filmId(newFilm) {
     this.movieId = newFilm;
   }
+
+  getRequestParams() {
+    return {
+      api_key: KEY,
+      language: this.language,
+      page: this.page,
+    };
+  }
 }
+
+export default apiService = new NewApiService();

@@ -1,17 +1,15 @@
 import { refs } from './refs';
 import axios from 'axios';
 import { createMarkupModal } from './modalMarkup';
-import NewApiService from './apiClass';
+import apiService from './apiClass';
 const filmoteka = document.querySelector('.filmoteka');
 import onClick from './onClick';
-const newApiService = new NewApiService();
 
 // async function getMovieById(id) {
 //   return await axios.get(
 //     `https://api.themoviedb.org/3/movie/${id}?api_key=8a95c8805d5f43b82cb5bfd70a3069b5&language=en-US`
 //   );
 // }
-
 
 async function getMovieById(id) {
   try {
@@ -20,7 +18,7 @@ async function getMovieById(id) {
     );
     const data = createMarkupModal(response.data);
     refs.backdrop.innerHTML = data;
-  onClick();
+    onClick();
   } catch (error) {
     console.error(error);
   }
@@ -38,7 +36,6 @@ async function handleOpenModal(event) {
   // {
   //   return;
   // }
-
 
   refs.backdrop.classList.remove('is-hidden');
   const movieId = event.target.parentNode.parentNode.dataset.id;
