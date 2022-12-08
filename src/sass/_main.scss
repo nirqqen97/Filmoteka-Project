@@ -117,20 +117,20 @@
 .photo-card {
   margin-bottom: 20px;
   width: 280px;
-  height: 443px;
+  // height: 443px;
   padding-bottom: 15px;
 
 
   @media screen and (min-width: 768px) {
     margin-bottom: 32px;
     width: 336px;
-    height: 495px;
+    // height: 495px;
   }
 
   @media screen and (min-width: 1280px) {
     margin-right: 16px;
     width: 395px;
-    height: 634px;
+    // height: 634px;
   }
 
   &:nth-child(even) {
