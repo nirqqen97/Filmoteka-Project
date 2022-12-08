@@ -3,6 +3,8 @@ import yuriKarmaz from '../images/avatar/yuri_karmaz.jpg';
 import juliaVlasova from '../images/avatar/julia_vlasova.jpg';
 import nikolaiNedilko from '../images/avatar/nikolai_nedilko.png';
 import yevhenVynohradov from '../images/avatar/yevhen_vynohradov.png';
+import dmytroNikolin from '../images/avatar/dmytro_nikolin.jpg';
+import marinaZalozna from '../images/avatar/marina_zalozna.png';
 
 export const users = [
   {
@@ -54,7 +56,7 @@ export const users = [
     id: '6',
     name: 'Marina Zalozna',
     role: 'Developer',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/330px-Brad_Pitt_2019_by_Glenn_Francis.jpg',
+    img: marinaZalozna,
     ginHabLink: 'https://github.com',
     FB_Link: 'https://www.facebook.com/bretbiti.bretbiti',
     LN_Link: 'https://www.linkedin.com',
@@ -99,7 +101,7 @@ export const users = [
     id: '11',
     name: 'Dmitriy Nikolin ',
     role: 'Developer',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/330px-Brad_Pitt_2019_by_Glenn_Francis.jpg',
+    img: dmytroNikolin,
     ginHabLink: 'https://github.com',
     FB_Link: 'https://www.facebook.com',
     LN_Link: 'https://www.linkedin.com',
