@@ -1,7 +1,8 @@
 import { refs } from './refs';
 import axios from 'axios';
 import { createMarkupModal } from './modalMarkup';
-import apiService from './apiClass';
+import {apiService} from './apiClass';
+
 const filmoteka = document.querySelector('.filmoteka');
 import onClick from './onClick';
 

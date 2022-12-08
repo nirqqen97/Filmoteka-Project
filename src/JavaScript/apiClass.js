@@ -99,4 +99,4 @@ export class NewApiService {
   }
 }
 
-export default apiService = new NewApiService();
+export const apiService = new NewApiService();

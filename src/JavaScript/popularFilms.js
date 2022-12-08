@@ -1,5 +1,5 @@
 import { createPopularFilmotekaMarkUp } from './createMarkUp';
-import apiService from '../JavaScript/apiClass';
+import { apiService } from '../JavaScript/apiClass';
 
 import { refs } from './refs';
 export async function fetchPopularFilms(resetPager = false) {
