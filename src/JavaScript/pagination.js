@@ -1,4 +1,4 @@
-import apiService from '../JavaScript/apiClass';
+import {apiService} from '../JavaScript/apiClass';
 import onClickBtnSearch from '../JavaScript/mainMarkUp';
 import Pagination from 'tui-pagination';
 
