@@ -1,5 +1,9 @@
-
-
+.content {
+	min-height: calc(100vh - 80px);
+}
+.tui-pagination{
+  margin-top: 60px;
+}
 .loader-chase {
   width: 100px;
   height: 100px;
@@ -144,8 +148,7 @@
   }
   
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  gap: 32px;
-  margin: 60px 0;
+  gap: 32px; 
  
   @media screen and (min-width: 1280px) {
    gap: 32px 16px;
