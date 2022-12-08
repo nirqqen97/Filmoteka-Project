@@ -1,8 +1,15 @@
+.footer {
+  background-color: #F7F7F7;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .footer__item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .students {
   display: flex;
   justify-content: center;
@@ -21,6 +28,7 @@
     }
   }
 }
+
 .footer__icon {
   -webkit-animation-name: 'anime';
   -webkit-animation-duration: 500ms;
@@ -31,22 +39,30 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
 @-webkit-keyframes anime {
   from {
     -webkit-transform: scale(0.7) rotate(-45deg);
   }
+
   to {
     -webkit-transform: scale(1.3) rotate(45deg);
   }
 }
+
 @-webkit-keyframes Glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
       0 0 40px hsl(330, 100%, 45%), 0 0 50px #e60073, 0 0 60px #e60073,
       0 0 70px #e60073;
   }
+
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
       0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
+}
+
+.tui-pagination {
+  margin-bottom: 70px;
 }
