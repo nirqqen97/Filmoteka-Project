@@ -1,11 +1,15 @@
-import avatar1 from '../images/avatar/user.jpg';
+import rostyslavNatkha from '../images/avatar/rostyslav_natkha.jpg';
+import yuriKarmaz from '../images/avatar/yuri_karmaz.jpg';
+import juliaVlasova from '../images/avatar/julia_vlasova.jpg';
+import nikolaiNedilko from '../images/avatar/nikolai_nedilko.png';
+import yevhenVynohradov from '../images/avatar/yevhen_vynohradov.png';
 
 export const users = [
   {
     id: '1',
     name: 'Dmitro Ivanov',
     role: 'Team lead',
-    img: avatar1,
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/330px-Brad_Pitt_2019_by_Glenn_Francis.jpg',
     ginHabLink: 'https://github.com/nirqqen97/',
     FB_Link: 'https://www.facebook.com/bretbiti.bretbiti',
     LN_Link: 'https://www.linkedin.com',
@@ -16,7 +20,7 @@ export const users = [
     id: '2',
     name: 'Julia Vlasova',
     role: 'Scrum-master',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/330px-Brad_Pitt_2019_by_Glenn_Francis.jpg',
+    img: juliaVlasova,
     ginHabLink: 'https://github.com/nirqqen97/',
     FB_Link: 'https://www.facebook.com/bretbiti.bretbiti',
     LN_Link: 'https://www.linkedin.com',
@@ -27,7 +31,7 @@ export const users = [
     id: '3',
     name: 'Yuri Karmaz',
     role: 'Developer',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/330px-Brad_Pitt_2019_by_Glenn_Francis.jpg',
+    img: yuriKarmaz,
     ginHabLink: 'https://github.com',
     FB_Link: 'https://www.facebook.com/bretbiti.bretbiti',
     LN_Link: 'https://www.linkedin.com',
@@ -72,7 +76,7 @@ export const users = [
     id: '8',
     name: 'Rostyslav Natkha',
     role: 'Developer',
-    img: '../images/avatar/user.jpg',
+    img: rostyslavNatkha,
     ginHabLink: 'https://github.com',
     FB_Link: 'https://www.facebook.com',
     LN_Link: 'https://www.linkedin.com',
@@ -84,7 +88,7 @@ export const users = [
     id: '10',
     name: 'Yevhen Vynohradov ',
     role: 'Developer',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/330px-Brad_Pitt_2019_by_Glenn_Francis.jpg',
+    img: yevhenVynohradov,
     ginHabLink: 'https://github.com',
     FB_Link: 'https://www.facebook.com',
     LN_Link: 'https://www.linkedin.com',
@@ -106,7 +110,7 @@ export const users = [
     id: '12',
     name: 'Nikolai Nedilko',
     role: 'Developer',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/330px-Brad_Pitt_2019_by_Glenn_Francis.jpg',
+    img: nikolaiNedilko,
     ginHabLink: 'https://github.com',
     FB_Link: 'https://www.facebook.com',
     LN_Link: 'https://www.linkedin.com',
