@@ -55,7 +55,8 @@ export default function renderCards(page) {
       </a>  
       <div class="info">
         <p class="">${item.title}</p>
-        <p class="info-item">${item.release_date}</p>           
+        <p class="info-item">${item.release_date}</p> 
+        <p class="info-item">${item.genre}</p>           
       </div>          
     </div> `;
     })
