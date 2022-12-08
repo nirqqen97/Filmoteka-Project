@@ -1,8 +1,8 @@
 import { refs } from './refs';
 import { fetchPopularFilms, fetchByName } from './popularFilms';
 
-refs.hideText.classList.add('clear');
-refs.btnSubmit.addEventListener('submit', onClickBtnSearch);
+refs.hideText?.classList.add('clear');
+refs.btnSubmit?.addEventListener('submit', onClickBtnSearch);
 
 export default function onClickBtnSearch(evt) {
   let resetPager = false;
@@ -10,7 +10,7 @@ export default function onClickBtnSearch(evt) {
     evt.preventDefault();
     resetPager = true;
   }
-  refs.hideText.classList.add('clear');
+  refs.hideText?.classList.add('clear');
   refs.filmoteka.innerHTML = '';
   if (refs.input.value === '') {
     fetchPopularFilms(resetPager);

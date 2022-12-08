@@ -15,8 +15,6 @@ export default initPagination = () => {
   instance.getCurrentPage();
 
   instance.on('afterMove', eventData => {
-    console.log(`Page changed: ${eventData.page}`);
-
     apiService.page = eventData.page;
     onClickBtnSearch();
   });
