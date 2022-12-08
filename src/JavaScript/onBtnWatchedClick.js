@@ -23,10 +23,10 @@ export default function onBtnWatchedClick(){
  
 if(film1 > film2){
     Notify.failure('Delete from watched❌')
-    watchedBtn.textContent = 'Add to watched'
+    watchedBtn.textContent = 'ADD TO WATCHED'
 }else if (film1<film2){
     Notify.success(`Added to watched✅`)
-    watchedBtn.textContent = 'Delete'
+    watchedBtn.textContent = 'DELETE'
 }
 }
 

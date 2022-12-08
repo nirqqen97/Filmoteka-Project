@@ -22,10 +22,10 @@ export default function onBtnQueueClick(){
  
 if(film1 > film2){
     Notify.failure('Delete from queue❌')
-    queueBtn.textContent = 'Add to watched'
+    queueBtn.textContent = 'ADD TO QUEUE'
 }else if (film1<film2){
     Notify.success(`Added to queue✅`)
-    queueBtn.textContent = 'Delete'
+    queueBtn.textContent = 'DELETE'
 }
 
 }
