@@ -11,9 +11,22 @@ export default function onBtnQueueClick(){
     release_date: document.querySelector('.modal__list').id.slice(0, 4),
     votes: document.querySelector('.modal__item-votes-span').textContent,
  }
-   Notify.success(`Added to queue✅`)
+   
  const localStorageUtil = new LocalStorageUtil()
+ const film1 = localStorageUtil.getFilms().length
+
  localStorageUtil.putFilms(filmData, filmData.filmId);
+
+ const queueBtn = document.querySelector('.modal__add-to-queueu')
+ const film2 = localStorageUtil.getFilms().length
+ 
+if(film1 > film2){
+    Notify.failure('Delete from queue❌')
+    queueBtn.textContent = 'Add to watched'
+}else if (film1<film2){
+    Notify.success(`Added to queue✅`)
+    queueBtn.textContent = 'Delete'
+}
 
 }
 

@@ -9,10 +9,28 @@ export default function onBtnWatchedClick(){
     release_date: document.querySelector('.modal__list').id.slice(0, 4),
     votes: document.querySelector('.modal__item-votes-span').textContent,
  }
- Notify.success(`Added to watched✅`)
+
  const localStorage = new LocalStorageUtil()
+
  const key = 'WatchedFilms'
  localStorage.changeKey(key)
+ const film1 = localStorage.getFilms().length
+ 
  localStorage.putFilms(filmData, filmData.filmId);
 
+ const watchedBtn = document.querySelector('.modal__add-to-watched')
+ const film2 = localStorage.getFilms().length
+ 
+if(film1 > film2){
+    Notify.failure('Delete from watched❌')
+    watchedBtn.textContent = 'Add to watched'
+}else if (film1<film2){
+    Notify.success(`Added to watched✅`)
+    watchedBtn.textContent = 'Delete'
 }
+}
+
+
+
+
+
