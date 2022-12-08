@@ -1,9 +1,11 @@
+import avatar1 from '../images/avatar/user.jpg';
+
 export const users = [
   {
     id: '1',
     name: 'Dmitro Ivanov',
     role: 'Team lead',
-    img: './images/avatar/user.jpg',
+    img: avatar1,
     ginHabLink: 'https://github.com/nirqqen97/',
     FB_Link: 'https://www.facebook.com/bretbiti.bretbiti',
     LN_Link: 'https://www.linkedin.com',

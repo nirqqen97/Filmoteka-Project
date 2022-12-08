@@ -1,7 +1,7 @@
 import renderCards from '../JavaScript/renderFromLocalStorage';
 import Pagination from 'tui-pagination';
 
-export const initPagination = paginatorSettings => {
+export function initLibraryPagination(paginatorSettings) {
   let instance = new Pagination(
     document.getElementById('tui-pagination-container'),
     paginatorSettings
@@ -12,4 +12,4 @@ export const initPagination = paginatorSettings => {
   instance.on('afterMove', eventData => {
     renderCards(eventData.page);
   });
-};
+}

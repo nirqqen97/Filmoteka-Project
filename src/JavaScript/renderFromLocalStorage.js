@@ -1,6 +1,6 @@
 import LocalStorageUtil from './localStorageUtil';
 import { refs } from './refs';
-import { initPagination } from './library-pagination';
+import { initLibraryPagination } from './library-pagination';
 
 const queueBtn = document.querySelector('#queue-btn');
 const watchedBtn = document.querySelector('#watched-btn');
@@ -34,7 +34,7 @@ function initCategoryData() {
     itemsPerPage: 9,
     totalItems: filmData?.length,
   };
-  initPagination(pager);
+  initLibraryPagination(pager);
   renderCards(1);
 }
 

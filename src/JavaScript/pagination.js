@@ -2,7 +2,7 @@ import apiService from '../JavaScript/apiClass';
 import onClickBtnSearch from '../JavaScript/mainMarkUp';
 import Pagination from 'tui-pagination';
 
-export default initPagination = () => {
+export function initPagination() {
   let instance = new Pagination(
     document.getElementById('tui-pagination-container'),
     {
@@ -18,4 +18,4 @@ export default initPagination = () => {
     apiService.page = eventData.page;
     onClickBtnSearch();
   });
-};
+}
