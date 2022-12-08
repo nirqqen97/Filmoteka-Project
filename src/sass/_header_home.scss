@@ -13,8 +13,8 @@
   background-image: url(../images/mobile/main-bg-mobile.jpg);
 
   @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
     background-image: url(../images/mobile/main-bg-mobile@2x.jpg);
   }
 
@@ -23,17 +23,18 @@
     background-image: url(../images/tablet/main-bg-tablet.jpg);
 
     @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
       background-image: url(../images/tablet/main-bg-tablet@2x.jpg);
     }
   }
+
   @media screen and (min-width: 1280px) {
     background-image: url(../images/desktop/main-bg-desktop.jpg);
 
     @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
       background-image: url(../images/desktop/main-bg-desktop@2x.jpg);
     }
   }
@@ -78,6 +79,7 @@
   font-size: 30px;
   line-height: 1.17;
 }
+
 .site-nav__logo-link {
   color: #fff;
 }
@@ -98,7 +100,6 @@
 .input {
   width: 100%;
   margin-bottom: 20px;
-
   background: transparent;
   border-top: none;
   border-left: none;
@@ -106,6 +107,7 @@
   border-color: white;
   border-width: 1px;
   color: white;
+  outline: none;
 
   @media screen and (min-width: 768px) {
     width: 336px;
