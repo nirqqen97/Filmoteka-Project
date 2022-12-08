@@ -2,6 +2,7 @@ import { refs } from './refs';
 import axios from 'axios';
 import { createMarkupModal } from './modalMarkup';
 import {apiService} from './apiClass';
+import { isWatched, isQueue } from './isMoviesAdded';
 
 const filmoteka = document.querySelector('.filmoteka');
 import onClick from './onClick';
@@ -18,8 +19,13 @@ async function getMovieById(id) {
       `https://api.themoviedb.org/3/movie/${id}?api_key=8a95c8805d5f43b82cb5bfd70a3069b5&language=en-US`
     );
     const data = createMarkupModal(response.data);
+    const watched = localStorage.getItem('WatchedFilms');
+    const queue = localStorage.getItem('QueueFilms');
     refs.backdrop.innerHTML = data;
     onClick();
+    isWatched(response.data.id);
+    isQueue(response.data.id);
+
   } catch (error) {
     console.error(error);
   }
@@ -41,10 +47,9 @@ async function handleOpenModal(event) {
   refs.backdrop.classList.remove('is-hidden');
   const movieId = event.target.parentNode.parentNode.dataset.id;
   console.log(movieId);
-  const { data } = getMovieById(movieId);
-  // const createModalCard = createMarkupModal(data);
-  // refs.backdrop.innerHTML = createModalCard;
+  getMovieById(movieId);
 }
+
 
 function closeModal(event) {
   if (
