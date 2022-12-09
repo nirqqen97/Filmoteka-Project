@@ -32,7 +32,6 @@ async function onOpenModal(event) {
   }
   refs.backdrop.classList.remove('is-hidden');
   const movieId = event.target.parentNode.parentNode.dataset.id;
-  console.log(movieId);
   getMovieById(movieId);
   document.body.style.overflow = 'hidden';
   window.addEventListener('keydown', onCloseModal);
