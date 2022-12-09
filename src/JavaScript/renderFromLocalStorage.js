@@ -41,8 +41,6 @@ function initCategoryData() {
 export default function renderCards(page) {
   refs.filmoteka.innerHTML = '';
   pager.currentPage = page;
-
-  // console.log("🚀 ~ filmData", filmData)
   const filmList = filmData
     ?.slice(
       (pager.currentPage - 1) * pager.itemsPerPage,
