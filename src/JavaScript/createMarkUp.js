@@ -1,5 +1,5 @@
 export function createPopularFilmotekaMarkUp(item) {
-  return `<div class="photo-card" data-id="${item.id}">
+  return `<li class="photo-card" data-id="${item.id}">
     <a class="photo-card__link"
       href="https://image.tmdb.org/t/p/w500${item.backdrop_path}">
       <img class="img" 
@@ -16,5 +16,5 @@ export function createPopularFilmotekaMarkUp(item) {
         item.release_date ? '| ' + item.release_date.substring(0, 4) : ''
       }</p>           
     </div>          
-  </div> `;
+  </li> `;
 }
