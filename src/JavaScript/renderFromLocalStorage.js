@@ -2,28 +2,28 @@ import LocalStorageUtil from './localStorageUtil';
 import { refs } from './refs';
 import { initLibraryPagination } from './library-pagination';
 
-const queueBtn = document.querySelector('#queue-btn');
-const watchedBtn = document.querySelector('#watched-btn');
+const queueBtnLib = document.querySelector('#queue-btn');
+const watchedBtnLib = document.querySelector('#watched-btn');
 
 const localStorageUtil = new LocalStorageUtil();
 
-queueBtn.addEventListener('click', onQueueBtnClick);
-watchedBtn.addEventListener('click', onWatchedBtnClick);
+queueBtnLib.addEventListener('click', onQueueBtnClick);
+watchedBtnLib.addEventListener('click', onWatchedBtnClick);
 
 let filmData = [];
 let pager;
 
 function onQueueBtnClick() {
   localStorageUtil.changeKey('queueFilms');
-  watchedBtn.classList.remove('button__library--current');
-  queueBtn.classList.add('button__library--current');
+  watchedBtnLib.classList.remove('button__library--current');
+  queueBtnLib.classList.add('button__library--current');
   initCategoryData();
 }
 
 function onWatchedBtnClick() {
   localStorageUtil.changeKey('WatchedFilms');
-  queueBtn.classList.remove('button__library--current');
-  watchedBtn.classList.add('button__library--current');
+  queueBtnLib.classList.remove('button__library--current');
+  watchedBtnLib.classList.add('button__library--current');
   initCategoryData();
 }
 
@@ -41,8 +41,6 @@ function initCategoryData() {
 export default function renderCards(page) {
   refs.filmoteka.innerHTML = '';
   pager.currentPage = page;
-
-  // console.log("🚀 ~ filmData", filmData)
   const filmList = filmData
     ?.slice(
       (pager.currentPage - 1) * pager.itemsPerPage,
