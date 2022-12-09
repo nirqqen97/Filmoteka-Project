@@ -24,6 +24,7 @@ export async function fetchByName(name, resetPager = false) {
 
     if (!films?.length) {
       refs.hideText?.classList.remove('clear');
+      fetchPopularFilms();
     } else {
       generateFilmoteka(films);
     }
