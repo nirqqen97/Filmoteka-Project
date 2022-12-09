@@ -35,7 +35,6 @@ async function onOpenModal(event) {
   console.log(movieId);
   getMovieById(movieId);
   document.body.style.overflow = 'hidden';
-  console.log(event);
   window.addEventListener('keydown', onCloseModal);
 }
 
@@ -50,7 +49,6 @@ function onCloseModal(event) {
   refs.backdrop.classList.add('is-hidden');
   refs.backdrop.innerHTML = '';
   document.body.style.overflow = 'scroll';
-  console.log(event);
   window.removeEventListener('keydown', onEscKeyPress);
 }
 function onEscKeyPress(event) {
