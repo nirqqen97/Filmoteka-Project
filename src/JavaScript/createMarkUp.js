@@ -1,10 +1,13 @@
 export function createPopularFilmotekaMarkUp(item) {
+  const poster = item.poster_path
+    ? `https://image.tmdb.org/t/p/w500/${item.poster_path}`
+    : `https://placehold.co/500x750?text=No+Image`;
   return `<li class="photo-card" data-id="${item.id}">
     <a class="photo-card__link"
       href="https://image.tmdb.org/t/p/w500${item.backdrop_path}">
       <img class="img" 
-        src="https://image.tmdb.org/t/p/w500${item.poster_path}" 
-        data-source="${item.poster_path}"
+        src="${poster}" 
+        data-source="${poster}"
         alt="${item.original_title}"
         loading="lazy"
         width="100%" height="90%" style="border-radius: 5px;"/>

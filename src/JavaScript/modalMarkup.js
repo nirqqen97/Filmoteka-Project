@@ -10,6 +10,9 @@ export function createMarkupModal({
   id,
   release_date,
 }) {
+  const poster = poster_path
+    ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+    : `https://placehold.co/500x750?text=No+Image`;
   const genresList = genres.map(item => item.name).join(', ');
   return `<div class="modal">
         <button type="button" class="btn__close js-close-modal">
@@ -20,7 +23,7 @@ export function createMarkupModal({
         </button>
         <div class="modal_container" data-id="${id}">
           <div class="modal__img-thumb">
-            <img class="modal__img" src="https://image.tmdb.org/t/p/w500/${poster_path}" alt="${title}" />
+            <img class="modal__img" src="${poster}" alt="${title}" />
           </div>
           <div class="modal__about-movie">
             <h2 class="modal__title">${title}</h2>
