@@ -27,7 +27,7 @@ refs.filmoteka.addEventListener('click', onOpenModal);
 
 async function onOpenModal(event) {
   event.preventDefault();
-  if (event.target.nodeName !== 'IMG') {
+  if (event.target.nodeName === 'UL') {
     return;
   }
   refs.backdrop.classList.remove('is-hidden');
