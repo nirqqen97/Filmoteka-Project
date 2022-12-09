@@ -191,7 +191,7 @@ body.modal-open {
 }
 
 .student-foto {
-  width: 150px;
+  width: 130px;
   height: auto;
   border-radius: 50%;
 }
@@ -227,8 +227,7 @@ body.modal-open {
   margin-bottom: 10px;
   border-bottom: 2px solid #99a1ca;
   @media screen and (min-width: 768px) {
-    font-size: 25px;
-    margin-bottom: 15px;
+    font-size: 20px;
   }
 }
 
@@ -242,8 +241,7 @@ body.modal-open {
   color: #e8eaee;
   margin-bottom: 10px;
   @media screen and (min-width: 768px) {
-    font-size: 25px;
-    margin-bottom: 15px;
+    font-size: 20px;
   }
 }
 
@@ -253,12 +251,13 @@ body.modal-open {
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: 0.04em;
+  padding: 0 100px;
 
   color: #76787e;
   margin-bottom: 10px;
   text-align: center;
   @media screen and (min-width: 768px) {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -283,5 +282,6 @@ body.modal-open {
     background: none;
     color: #ff001b;
     border-color: #ff001b;
+    cursor: pointer;
   }
 }
