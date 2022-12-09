@@ -6,6 +6,18 @@
   margin-top: 60px;
 }
 
+.tui-pagination .tui-is-selected, .tui-pagination strong{
+ background-color: #ff6b08;
+ border:#ff6b08;
+ 
+ border-radius: 3px;
+}
+.tui-pagination .tui-first-child.tui-is-selected{
+  border-right: #ff6b08 ;
+  border-left: #ff6b08;
+}
+
+
 .loader-chase {
   width: 100px;
   height: 100px;
