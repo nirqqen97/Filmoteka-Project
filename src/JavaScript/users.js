@@ -3,17 +3,17 @@ import yuriKarmaz from '../images/avatar/yuri_karmaz.jpg';
 import juliaVlasova from '../images/avatar/julia_vlasova.jpg';
 import nikolaiNedilko from '../images/avatar/nikolai_nedilko.png';
 import yevhenVynohradov from '../images/avatar/yevhen_vynohradov.png';
-import dmytroNikolin from '../images/avatar/dmytro_nikolin.jpg';
 import marinaZalozna from '../images/avatar/marina_zalozna.png';
-import dimasamoylik from '../images/avatar/dima_samoylik.jpg';
-import dmitroivanov from '../images/avatar/dmitro_ivanov.jpg';
+import Dmytro from '../images/avatar/Dmytro.jpg';
+import Dmytro_samoylik from '../images/avatar/Dmytro_samoylik.jpg';
+import nikolin from '../images/avatar/nikolin.jpg';
 
 export const users = [
   {
     id: '1',
-    name: 'Dmitro Ivanov',
+    name: 'Dmytro Ivanov',
     role: 'Team lead',
-    img: dmitroivanov,
+    img: Dmytro,
     ginHabLink: 'https://github.com/nirqqen97/',
     FB_Link: 'https://www.facebook.com/bretbiti.bretbiti',
     LN_Link: 'https://www.linkedin.com',
@@ -69,12 +69,12 @@ export const users = [
     id: '7',
     name: 'Dima Samoylik',
     role: 'Tech lead',
-    img: dimasamoylik,
+    img: Dmytro_samoylik,
     ginHabLink: 'https://github.com',
     FB_Link: 'https://www.facebook.com/',
     LN_Link: 'https://www.linkedin.com/',
     discription:
-      'I am a beginner Full Stack developer. I have completed courses in markup and javascript. I continue to study frameworks, such as react.js and node.js.',
+      'I am a beginner Full Stack developer. I have completed courses in markup and javascript.',
   },
   {
     id: '8',
@@ -103,7 +103,7 @@ export const users = [
     id: '11',
     name: 'Dmitriy Nikolin ',
     role: 'Developer',
-    img: dmytroNikolin,
+    img: nikolin,
     ginHabLink: 'https://github.com',
     FB_Link: 'https://www.facebook.com',
     LN_Link: 'https://www.linkedin.com',

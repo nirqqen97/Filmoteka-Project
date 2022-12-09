@@ -27,12 +27,11 @@ refs.filmoteka.addEventListener('click', onOpenModal);
 
 async function onOpenModal(event) {
   event.preventDefault();
-  if (event.target.nodeName !== 'IMG') {
+  if (event.target.nodeName === 'UL') {
     return;
   }
   refs.backdrop.classList.remove('is-hidden');
   const movieId = event.target.parentNode.parentNode.dataset.id;
-  console.log(movieId);
   getMovieById(movieId);
   document.body.style.overflow = 'hidden';
   window.addEventListener('keydown', onCloseModal);
