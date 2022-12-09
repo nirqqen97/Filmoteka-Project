@@ -5,13 +5,15 @@ import nikolaiNedilko from '../images/avatar/nikolai_nedilko.png';
 import yevhenVynohradov from '../images/avatar/yevhen_vynohradov.png';
 import dmytroNikolin from '../images/avatar/dmytro_nikolin.jpg';
 import marinaZalozna from '../images/avatar/marina_zalozna.png';
+import dimasamoylik from '../images/avatar/dima_samoylik.jpg';
+import dmitroivanov from '../images/avatar/dmitro_ivanov.jpg';
 
 export const users = [
   {
     id: '1',
     name: 'Dmitro Ivanov',
     role: 'Team lead',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/330px-Brad_Pitt_2019_by_Glenn_Francis.jpg',
+    img: dmitroivanov,
     ginHabLink: 'https://github.com/nirqqen97/',
     FB_Link: 'https://www.facebook.com/bretbiti.bretbiti',
     LN_Link: 'https://www.linkedin.com',
@@ -67,7 +69,7 @@ export const users = [
     id: '7',
     name: 'Dima Samoylik',
     role: 'Tech lead',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg/330px-Brad_Pitt_2019_by_Glenn_Francis.jpg',
+    img: dimasamoylik,
     ginHabLink: 'https://github.com',
     FB_Link: 'https://www.facebook.com/',
     LN_Link: 'https://www.linkedin.com/',

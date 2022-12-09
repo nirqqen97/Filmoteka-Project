@@ -194,6 +194,7 @@ body.modal-open {
   width: 150px;
   height: auto;
   border-radius: 50%;
+  background-size: contain;
 }
 
 .border__outside {
@@ -283,5 +284,6 @@ body.modal-open {
     background: none;
     color: #ff001b;
     border-color: #ff001b;
+    cursor: pointer;
   }
 }
