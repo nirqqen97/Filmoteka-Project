@@ -1,17 +1,9 @@
 import { refs } from './refs';
 import axios from 'axios';
 import { createMarkupModal } from './modalMarkup';
-import {apiService} from './apiClass';
+import { apiService } from './apiClass';
 import { isWatched, isQueue } from './isMoviesAdded';
-
-const filmoteka = document.querySelector('.filmoteka');
 import onClick from './onClick';
-
-// async function getMovieById(id) {
-//   return await axios.get(
-//     `https://api.themoviedb.org/3/movie/${id}?api_key=8a95c8805d5f43b82cb5bfd70a3069b5&language=en-US`
-//   );
-// }
 
 async function getMovieById(id) {
   try {
@@ -25,33 +17,29 @@ async function getMovieById(id) {
     onClick();
     isWatched(response.data.id);
     isQueue(response.data.id);
-
   } catch (error) {
     console.error(error);
   }
 }
 
-refs.backdrop.addEventListener('click', closeModal);
-refs.filmoteka.addEventListener('click', handleOpenModal);
+refs.backdrop.addEventListener('click', onCloseModal);
+refs.filmoteka.addEventListener('click', onOpenModal);
 
-async function handleOpenModal(event) {
+async function onOpenModal(event) {
   event.preventDefault();
-  // if (
-  //   !event.target.parentNode.classList.contains('filmoteka') &&
-  //   !event.target.parentNode.classList.contains('info')
-  // )
-  // {
-  //   return;
-  // }
-
+  if (event.target.nodeName !== 'IMG') {
+    return;
+  }
   refs.backdrop.classList.remove('is-hidden');
   const movieId = event.target.parentNode.parentNode.dataset.id;
   console.log(movieId);
   getMovieById(movieId);
+  document.body.style.overflow = 'hidden';
+  console.log(event);
+  window.addEventListener('keydown', onCloseModal);
 }
 
-
-function closeModal(event) {
+function onCloseModal(event) {
   if (
     !event.target.classList.contains('backdrop') &&
     !event.target.classList.contains('js-close-modal') &&
@@ -59,9 +47,14 @@ function closeModal(event) {
   ) {
     return;
   }
-
   refs.backdrop.classList.add('is-hidden');
   refs.backdrop.innerHTML = '';
-  //   console.log("code: ", event.code);
+  document.body.style.overflow = 'scroll';
+  console.log(event);
+  window.removeEventListener('keydown', onEscKeyPress);
 }
-document.addEventListener('keydown', closeModal);
+function onEscKeyPress(event) {
+  if (event.code === 'Escape') {
+    onCloseModal();
+  }
+}
