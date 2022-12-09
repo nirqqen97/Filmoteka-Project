@@ -1,5 +1,4 @@
-import onBtnQueueClick from './onBtnQueueClick'
-import onBtnWatchedClick from './onBtnWatchedClick'
+import { onBtnQueueClick, onBtnWatchedClick } from "./addToLocalStorage"
 
 export default function onClick(){
 const queueBtn = document.querySelector('.modal__add-to-queueu')
