@@ -47,7 +47,7 @@ export default function renderCards(page) {
       pager.currentPage * pager.itemsPerPage
     )
     .map(item => {
-      return `<div class="photo-card" data-id="${item.filmId}"}>
+      return `<li class="photo-card" data-id="${item.filmId}"}>
       <a class="photo-card__link"  href="https://image.tmdb.org/t/p/w500${item.backdrop_path}">
         <img  src="https://image.tmdb.org/t/p/w500${item.poster_path}" data-source="${item.poster_path}" alt="${item.title}" loading="lazy" width="100%" height="90%" style="border-radius: 5px;"/>
       </a>  
@@ -55,7 +55,7 @@ export default function renderCards(page) {
         <p class="">${item.title}</p>
         <p class="info-item">${item.genre} | ${item.release_date}</p>           
       </div>          
-    </div> `;
+    </li> `;
     })
     .join('');
   refs.filmoteka.insertAdjacentHTML('beforeend', filmList);
