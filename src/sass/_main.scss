@@ -2,21 +2,24 @@
   min-height: calc(100vh - 80px);
 }
 
-.tui-pagination {
-  margin-top: 60px;
+.tui-pagination{
+  margin-top: 80px;
+  margin-bottom: 0px;
 }
 
 .tui-pagination .tui-is-selected, .tui-pagination strong{
  background-color: #ff6b08;
- border:#ff6b08;
- 
+ border:#ff6b08; 
  border-radius: 3px;
 }
+
 .tui-pagination .tui-first-child.tui-is-selected{
   border-right: #ff6b08 ;
   border-left: #ff6b08;
 }
-
+.tui-pagination .tui-first, .tui-pagination .tui-last, .tui-pagination .tui-next, .tui-pagination .tui-next-is-ellip, .tui-pagination .tui-prev, .tui-pagination .tui-prev-is-ellip{
+  height: 28px;
+}
 
 .loader-chase {
   width: 100px;
@@ -116,19 +119,24 @@
     transform: scale(1);
   }
 }
+.main{
+  padding-top: 20px;
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    padding: 60px 0px;
+  }
+}
 
 .filmoteka {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
-  align-items: center;
-  margin: 20px 0px;
   justify-content: center;
+  padding: 0;
+  margin: 0;
 
   @media screen and (min-width: 768px) {
-    margin: 60px 0px;
+    margin-right: -16px;
   }
-
   @media screen and (min-width: 1280px) {
     margin-right: -32px;
   }
@@ -137,11 +145,9 @@
 .photo-card {
   margin-bottom: 20px;
   width: 280px;
-  padding-bottom: 15px;
-
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 32px;
+    margin-bottom: 32px;    
     width: 336px;
   }
 
@@ -176,7 +182,7 @@
     transform: translateY(-20px);
     height: 100%;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       margin: 0 auto 20px;
       max-width: 480px;
     }
