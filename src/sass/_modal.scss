@@ -7,8 +7,7 @@
   height: 100%;
   z-index: 10;
   transition-property: opacity, visibility;
-  transition-duration: 300ms;
-  transition-timing-function: linear;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
   pointer-events: initial;
   visibility: visible;
@@ -21,6 +20,11 @@
   }
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+
 .modal {
   max-width: 390px;
   background-color: #fff;
@@ -28,7 +32,8 @@
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) scale(1);
   overflow-y: scroll;
   opacity: 1;
   border-radius: 8px;
@@ -54,26 +59,24 @@
   }
 }
 
-.btn__close {
+.btn-close-modal {
   position: absolute;
   top: 16px;
   right: 16px;
   border: none;
   background-color: transparent;
 }
-.btn__close:hover,
-.btn__close:focus {
+.btn-close-modal:hover,
+.btn-close-modal:focus {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 .btn__close-icon {
   transition: linear 250ms;
-  fill: #000;
 }
 .btn__close-icon:hover {
   fill: #ff6b01;
-  color: #ff6b01;
 }
 
 .modal__img-thumb {

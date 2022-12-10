@@ -6,7 +6,7 @@ export const refs = {
   btnSubmit: document.querySelector('.search__form'),
   hideText: document.querySelector('.js-hidden-message'),
   searchBtn: document.querySelector('.js-search-btn'),
-  filmoteka : document.querySelector('.filmoteka'),
+  filmoteka: document.querySelector('.filmoteka'),
 
   header: document.getElementById('header'),
   homeLink: document.querySelector('.js-link-home'),
@@ -21,6 +21,7 @@ export const refs = {
   modal: document.querySelector('.js-modal'),
   closeBtn: document.querySelector('.js-close-modal'),
   main: document.querySelector('.wrapper'),
+  modalWrap: document.querySelector('.modal__wrap'),
 
   homePageContainer: document.querySelector('.js-home-page-container'),
   libraryPageContainer: document.querySelector('.js-library-container'),

@@ -14,14 +14,7 @@ export function createMarkupModal({
     ? `https://image.tmdb.org/t/p/w500/${poster_path}`
     : `https://placehold.co/500x750?text=No+Image`;
   const genresList = genres.map(item => item.name).join(', ');
-  return `<div class="modal">
-        <button type="button" class="btn__close js-close-modal">
-         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="js-close-modal btn__close-icon">
-          <path d="M8 8L22 22" stroke="black" stroke-width="2"/>
-          <path d="M8 22L22 8" stroke="black" stroke-width="2"/>
-      </svg>                
-        </button>
-        <div class="modal_container" data-id="${id}">
+  return `<div class="modal_container" data-id="${id}">
           <div class="modal__img-thumb">
             <img class="modal__img" src="${poster}" alt="${title}" />
           </div>
@@ -66,6 +59,5 @@ export function createMarkupModal({
               </button>
             </div>
           </div>
-        </div>
-      </div>`;
+        </div>`;
 }
