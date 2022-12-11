@@ -16,7 +16,6 @@ async function onOpenModal(event) {
 
   const item = event.target.closest('li');
   const movieId = item.dataset.id;
-  console.log(movieId);
   apiService.filmId = movieId;
   apiService.fetchFullInfo().then(data => {
     refs.modalWrap.innerHTML = createMarkupModal(data);
