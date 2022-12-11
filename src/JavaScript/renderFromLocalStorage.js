@@ -14,7 +14,7 @@ let filmData = [];
 let pager;
 
 function onQueueBtnClick() {
-  localStorageUtil.changeKey('queueFilms');
+  localStorageUtil.changeKey('QueueFilms');
   watchedBtnLib.classList.remove('button__library--current');
   queueBtnLib.classList.add('button__library--current');
   initCategoryData();
