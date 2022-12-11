@@ -55,7 +55,7 @@ export class NewApiService {
     const dataImages = await fetch(url);
     const parseData = await dataImages.json();
 
-    return await parseData.results;
+    return await parseData;
   }
 
   async fetchGenresList() {
