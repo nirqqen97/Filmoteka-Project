@@ -15,7 +15,7 @@ async function onOpenModal(event) {
   }
 
   const item = event.target.closest('li');
-  movieId = item.dataset.id;
+  const movieId = item.dataset.id;
   console.log(movieId);
   apiService.filmId = movieId;
   apiService.fetchFullInfo().then(data => {
