@@ -1,6 +1,6 @@
 export default class LocalStorageFilm {
     constructor() {
-        this.keyName = 'queueFilms';
+        this.keyName = 'QueueFilms';
     }
   
     changeKey(newKey){
