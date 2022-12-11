@@ -20,11 +20,11 @@ async function onOpenModal(event) {
   apiService.filmId = movieId;
   apiService.fetchFullInfo().then(data => {
     refs.modalWrap.innerHTML = createMarkupModal(data);
-    const watched = localStorage.getItem('WatchedFilms');
-    const queue = localStorage.getItem('QueueFilms');
+    let watched = localStorage.getItem('WatchedFilms');
+    let queue = localStorage.getItem('QueueFilms');
     onClick();
-    isWatched(data.id);
-    isQueue(data.id);
+    watched = isWatched(data.id);
+    queue = isQueue(data.id);
   });
   refs.backdrop.classList.remove('is-hidden');
   window.addEventListener('keydown', onEscKeyPress);
