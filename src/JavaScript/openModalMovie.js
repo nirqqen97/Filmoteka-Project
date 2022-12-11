@@ -23,8 +23,8 @@ async function onOpenModal(event) {
     let watched = localStorage.getItem('WatchedFilms');
     let queue = localStorage.getItem('QueueFilms');
     onClick();
-    watched = isWatched(data.id);
-    queue = isQueue(data.id);
+    isWatched(data.id);
+    isQueue(data.id);
   });
   refs.backdrop.classList.remove('is-hidden');
   window.addEventListener('keydown', onEscKeyPress);
