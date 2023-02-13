@@ -11,8 +11,9 @@ export function createMarkupModal({
   release_date,
 }) {
   const poster = poster_path
-    ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+    ? `https://image.tmdb.org/t/p/w500${poster_path}`
     : `https://placehold.co/500x750?text=No+Image`;
+    console.log(poster_path);
   const genresList = genres.map(item => item.name).join(', ');
   return `<div class="modal_container" data-id="${id}">
           <div class="modal__img-thumb">
